@@ -1,0 +1,270 @@
+<!-- container for backgrund image and credit -->
+<div id="background">
+    <img src="bg_storm.jpg" alt=""/>
+</div>
+
+<!-- overlay: busy -->
+<div id="overlay_busy">
+    <span class="ob_title">Please Wait</span><br/>
+    <span class="ob_body">Looking up your rainfall info</span><br/>
+    <img src="busy_icon.gif" alt=""/>
+</div>
+
+<!-- Google Website Translator -->
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT}, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- PAGE ELEMENTS -->
+
+<div class="body_wrapper">
+
+<!-- top div for map and output -->
+<div class="top_pane">
+    
+    <!-- first is graphics div -->
+    <div class="graphic_section">
+        
+        <a class="warning_link" href="http://www.appropedia.org/Rainwater_Collection_Calculator#Warnings"
+           onclick="target='_blank'">
+            <span class="warning_drop_cap">WARNING:</span> Click here to read the
+                dangers of drinking and collecting rainwater.
+        </a>
+        
+        <!-- GMap area -->
+        <div id="map_area">
+            <span class="addr_title">Address: </span>
+            <input type="text" id="addressbox" class="mid_right_input_box" name="Text1"
+                   onkeydown="if(event.keyCode == 13) showAddress();"/>
+            <input type="button" id="b_addr" class="mid_right_button" value="Center Map"
+                   name="btnFindAddress" onclick="showAddress();"/>
+            <br/>
+            
+            <!-- GMap Location -->
+            <div id="mapcontent" class="map_content"></div>
+            <div class="map_go_panel">
+                <input id="b_reset" class="b_reset" onclick="clearMap();"
+                       type="button" value="Reset Page"/>
+                
+                <img id="img_arrow_left" src="arrow_right.png" alt=""/>
+                <img id="img_arrow_right" src="arrow_left.png" alt=""/>
+                <img id="img_arrow_reset" src="arrow_left.png" alt=""/>
+                
+                <input id="b_done" class="b_done" onclick="callWeather();"
+                       type="button" value="GO" rel="#overlay_busy"/>
+            </div>
+        </div>
+        
+        <!-- Graphs will go here -->
+        <span id="graph_area" class="graph_area">
+            ERROR 500!
+        </span>
+        
+    </div>
+    
+    
+    <!-- second div is a list of output data -->
+    <div id="output" class="output_section">
+        
+        <!-- logo -->
+        <div style="text-align:center;">
+            <a href="http://www.appropedia.org/Rainwater_Collection_Calculator" onclick="target='_blank'">
+                <img src="rcc_logo.png" alt="Error!"/>
+            </a>
+        </div>
+        
+        <!-- instructions -->
+        <div class="output_instructions">
+            <span class="output_instructions_drop_cap">About:</span> Enter an address and click
+            Center Map. Select the corners of your roof and click 'GO'. Click (?) for descriptions
+            and (graph) for more results. Please visit our documentation page on
+            <a href="http://www.appropedia.org/Rainwater_Collection_Calculator"
+               onclick="target='_blank'" class="intro_link">
+               Appropedia</a>.
+        </div>
+        
+        <!-- unit conversion -->
+        <div class="unit_converter">
+            <span id="unit_converter_text" onclick="toggleGlobalUnit();">
+                (units: <span id="unit_setting"></span>)
+            </span>
+        </div>
+        
+        <!-- stats -->
+        <div class="output_data">
+            <span class="ul_title">Project Details:</span>
+            <ul>
+                <li>Annual Rainfall: 
+                    <span id="out_rain" class="output_text"></span>
+                    <a href="http://www.appropedia.org/Rainwater_Collection_Calculator#Annual_Rainfall"
+                       onclick="target='_blank'" class="help_icon help_icon_list">(?)</a>
+                </li>
+                <li>Monthly Rainfall: 
+                    <a id="rain_graph_link" onclick="changeGraphic('precipitation');" class="graph_link">
+                        (graph)</a> <!-- sameline is fix for unlined linebreak -->
+                    <a href="http://www.appropedia.org/Rainwater_Collection_Calculator#Monthly_Rainfall"
+                       onclick="target='_blank'" class="help_icon help_icon_list">(?)</a>
+                </li>
+                <li>Usage Profile: 
+                    <a id="use_graph_link" onclick="changeGraphic('consumption');" class="graph_link">
+                        (graph)</a> <!-- sameline is fix for unlined linebreak -->
+                    <a href="http://www.appropedia.org/Rainwater_Collection_Calculator#Usage_Profile"
+                       onclick="target='_blank'" class="help_icon help_icon_list">(?)</a>
+                </li>
+                <li>Roof Area: 
+                    <span id="out_area" class="output_text"></span>
+                    <a href="http://www.appropedia.org/Rainwater_Collection_Calculator#Area"
+                       onclick="target='_blank'" class="help_icon help_icon_list">(?)</a>
+                </li>
+                <li>Roof Material: 
+                    <span id="out_material" class="output_text"></span>
+                    <a href="http://www.appropedia.org/Rainwater_Collection_Calculator#Roof_Material"
+                       onclick="target='_blank'" class="help_icon help_icon_list">(?)</a>
+                </li>
+                <li>System Efficiency: 
+                    <span id="out_efficiency" class="output_text"></span>
+                    <a href="http://www.appropedia.org/Rainwater_Collection_Calculator#System_Efficiency"
+                       onclick="target='_blank'" class="help_icon help_icon_list">(?)</a>
+                </li>
+                <li>Storage Distance: 
+                    <span id="out_flush_dist" class="output_text"></span>
+                    <a href="http://www.appropedia.org/Rainwater_Collection_Calculator#Tank_Distance"
+                       onclick="target='_blank'" class="help_icon help_icon_list">(?)</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="output_calculations">
+            <span class="ul_title">Calculations:</span>
+            <ul>
+                <li>Annual Collection: 
+                    <span id="out_harvest" class="output_text"></span>
+                    <a href="http://www.appropedia.org/Rainwater_Collection_Calculator#Annual_Collection_Potential"
+                       onclick="target='_blank'" class="help_icon help_icon_list">(?)</a>
+                </li>
+                <li>Tank Size: 
+                    <span id="out_tank" class="output_text"></span>
+                    <a href="http://www.appropedia.org/Rainwater_Collection_Calculator#Minimum_Tank_Size"
+                       onclick="target='_blank'" class="help_icon help_icon_list">(?)</a>
+                </li>
+                <li>Monthly Tank Levels: 
+                    <a id="collection_graph_link" onclick="changeGraphic('storage');" class="graph_link">
+                        (graph)</a> <!-- sameline is fix for unlined linebreak -->
+                    <a href="http://www.appropedia.org/Rainwater_Collection_Calculator#Monthly_Tank_Levels"
+                       onclick="target='_blank'" class="help_icon help_icon_list">(?)</a>
+                </li>
+                <li>Full Tank Weight:
+                    <span id="out_weight" class="output_text"></span>
+                    <a href="http://www.appropedia.org/Rainwater_Collection_Calculator#Full_Tank_Weight"
+                       onclick="target='_blank'" class="help_icon help_icon_list">(?)</a>
+                </li>
+                <li>Pipe Size: 
+                    <a id="downspout_graph_link" onclick="changeGraphic('downspout');" class="graph_link">
+                        (graph)</a> <!-- sameline is fix for unlined linebreak -->
+                    <a href="http://www.appropedia.org/Rainwater_Collection_Calculator#Pipe_Size"
+                       onclick="target='_blank'" class="help_icon help_icon_list">(?)</a>
+                </li>
+                <li>First Flush: 
+                    <span id="out_first_flush" class="output_text"></span>
+                    <a href="http://www.appropedia.org/Rainwater_Collection_Calculator#First_Flush_Size"
+                       onclick="target='_blank'" class="help_icon help_icon_list">(?)</a>
+                </li>
+                <!--<li>Slow Sand Filter Size: 
+                    <span id="out_filter" class="output_text"></span>
+                    <a href="http://www.google.com"
+                       onclick="target='_blank'" class="help_icon help_icon_list">(?)</a>
+                </li>-->
+            </ul>
+        </div>
+    </div>
+    
+</div>
+
+<!-- input div on bottom -->
+<div class="input_section">
+    <!-- inputs here -->
+    
+    <h3>Optional Details</h3> 
+    
+    <!-- only three inputs needed -->
+    
+    <div class="input_tank">
+        <span class="input_title it_tank">Tank Size (<span class="unit_L"></span>)</span><br/>
+        <input type="text" id="input_tank_box" maxlength="7"
+               onkeypress="return isNumberKey(event);"
+               onkeyup="return newTankSize();"
+               onblur="return ensureTankSize();"/>
+        <a href="http://www.appropedia.org/Rainwater_Collection_Calculator#Tank_Size"
+           onclick="target='_blank'" class="help_icon help_icon_tank">(?)</a>
+    </div>
+    
+    <div class="input_storage">
+        <span class="input_title it_dist">Tank Distance (<span class="unit_m"></span>)</span><br/>
+        <input type="text" id="input_storage_box" maxlength="5" value="5"
+               onkeypress="return isNumberKey(event);"
+               onkeyup="return newDistance();"/>
+        <a href="http://www.appropedia.org/Rainwater_Collection_Calculator#Tank_Distance"
+           onclick="target='_blank'" class="help_icon help_icon_distance">(?)</a>
+    </div>
+    
+    <div class="input_material">
+        <span class="input_title it_material">Roof Material</span><br/>
+        <select id="input_material_box" onchange="newMaterial();">
+            <option value="1">Perfect</option>
+            <option value="0.95">Tile</option>
+            <option value="0.95">Metal</option>
+            <option value="0.95">Concrete</option>
+            <option value="0.95">Asphalt</option>
+            <option value="0.7">Gravel</option>
+            <option value="0.75">Soil</option>
+            <option value="0.17">Grass</option>
+        </select>
+        <a href="http://www.appropedia.org/Rainwater_Collection_Calculator#Roof_Material"
+           onclick="target='_blank'" class="help_icon help_icon_material">(?)</a>
+    </div>
+    
+    <div class="input_title input_usage_wrapper">
+        <a id="input_usage_autofill" onclick="toggleAutoFill();">
+            (autofill: <span id="autofill_value"></span>)
+        </a>
+        Monthly Water Usage (<span class="unit_L"></span>)<br/>
+        <div id="input_usage"></div> <!-- filled via script -->
+        <a href="http://www.appropedia.org/Rainwater_Collection_Calculator#Monthly_Water_Usage"
+           onclick="target='_blank'" class="help_icon help_icon_usage">(?)</a>
+    </div>
+    
+</div>
+
+
+<!-- Value Adjustment area -->
+<div class="input_override_wrapper">
+    <div id="input_override">
+        <span class="io_title">
+            Data Adjustments
+        </span>
+        <a id="io_reset" onclick="resetAllValues();" class="io_title_reset">
+            (restore values)</a> <!-- sameline is fix for unlined linebreak -->
+        <div class="io_rain">
+            <span class="io_rain_title">
+                Rainfall (<span class="unit_mm"></span>)
+            </span><br/>
+            <div id="io_rain_inputs"></div> <!-- filled via script -->
+            <a href="http://www.appropedia.org/Rainwater_Collection_Calculator#Rainfall"
+               onclick="target='_blank'" class="help_icon help_icon_rain">(?)</a>
+        </div>
+        <div class="io_area">
+            <span class="io_area_title">Area (<span class="unit_m2"></span>)</span><br/>
+            <input type="text" id="io_input_area" maxlength="8" value="1000"
+                   onkeypress="return isNumberKey(event);"
+                   onkeyup="return newArea();"/>
+            <a href="http://www.appropedia.org/Rainwater_Collection_Calculator#Area"
+               onclick="target='_blank'" class="help_icon help_icon_area">(?)</a>
+        </div>
+    </div>
+</div>
+
+</div> <!-- wrapper div -->

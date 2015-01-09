@@ -1,0 +1,70 @@
+<!--
+	This calculator was made to aid in designing a rainwater catchment
+	system and is offered free to the world via pequals.com. Please do not
+	replicate this calculator elsewhere but feel free to link directly
+	to the calculator's homepage (pequals.com/rain).
+	
+	Feel free to use this code as reference, but do not in any way
+	monitize code taken from this project.
+	
+	Based on the Save The Rain WorldBank Tool (save-the-rain.com/world-bank)
+	
+	Libraries Used:
+	 . jQuery (jquery.com)
+	 . jQueryTools (flowplayer.org/tools)
+	 . Google Maps JavaScript API (code.google.com/apis/maps)
+	 . Highcharts (highcharts.com)
+	 . ELabel extension (econym.org.uk/gmap/elabel.htm)
+	
+	Logo by Flaming Text (www.flamingtext.com)
+	
+	Created for ENGR308 at Humboldt State University - Fall 2011
+	by Dan Cobb with Mike Despars and Lonny Grafman
+	 . Dan Cobb: (cobbdb@gmail.com) (petitgibier.sytes.net)
+	 . Lonny Grafman: (lonny@appropedia.org) (www.appropedia.org)
+-->
+
+<!-- IE 8 'compatability' workarounds -->
+<meta http-equiv="X-UA-Compatible" content="IE=8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26042472-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+<!-- search engine tags -->
+<title>PEquals.com: Rainwater Catchment Calculator</title>
+<meta name="description" content="Your one-stop aid in calculating and designing for commercial and residential rainwater catchment systems."/>
+<meta name="keywords" content="rainwater,catchment,rain collection,recycle rain,rain storage,monthly rainfall,weather station"/>
+
+<!-- link the Tools -->
+<script src="jquery.tools.min.js" type="text/javascript"></script>
+
+<!-- Rain GMap libraries -->
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAABqfyq4qu61pWcJr7MlpdRhS1LKgbnxB6t-zDT26C_9JzY6Uq4RTD5XHPOaZD1KvNdGHb-dmo0S8wQA" type="text/javascript"></script>
+<script src="http://serverapi.arcgisonline.com/jsapi/gmaps/?v=1.6" type="text/javascript"></script>
+<script src="RainMap.js" type="text/javascript"></script>
+<script src="RCC_init.js" type="text/javascript"></script>
+<script src="map_labels.js" type="text/javascript"></script>
+<script src="rcc_util.js" type="text/javascript"></script>
+<script src="highcharts.js" type="text/javascript"></script>
+<script src="rcc_graphs.js" type="text/javascript"></script>
+<script src="rcc_math.js" type="text/javascript"></script>
+<script src="rcc_units.js" type="text/javascript"></script>
+
+<link href="rcc.css" rel="stylesheet" type="text/css"/>
+<link href="rcc_overlays.css" rel="stylesheet" type="text/css"/>
+<link href="rcc_input_override.css" rel="stylesheet" type="text/css"/>
+<link href="rcc_input_area.css" rel="stylesheet" type="text/css"/>
+<link href="rcc_help.css" rel="stylesheet" type="text/css"/>
+
+<!-- Google Website Translator -->
+<meta name="google-translate-customization" content="cf6f90d30cac88d-2bda3379a0f9b865-g2522b8edb7d27cab-10"></meta>
