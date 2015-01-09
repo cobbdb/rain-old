@@ -1,37 +1,28 @@
-
-
-.input_override_wrapper
-{
+.input_override_wrapper {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
 	height: 47px;
-	
 	/*background-color: #333;*/
-	
 	/*border-top-style: dashed;
 	border-width: 1px;
 	border-color: #666;*/
 }
 
-#input_override
-{
+#input_override {
 	width: 100%;
 	height: 63px;
-	
 	position: absolute;
 	left: 0;
 	bottom: 0;
 }
 
-.io_title
-{
+.io_title {
 	display: none;
 	position: absolute;
 	top: 2px;
 	width: 100%;
 	text-align: center;
-	
 	color: #CCC;
 	font-size: 12px;
 	font-family: Georgia, serif;
@@ -39,107 +30,74 @@
 	text-decoration: underline;
 }
 
-.io_title_reset
-{
-	color: #BAB;
+.io_title_reset {
+	color: #bad1e0;
 	font-family: Arial, Gadget, sans-serif;
 	font-weight: bold;
 	font-size: 11px;
 	text-decoration: none;
 	cursor:pointer;
-	
 	position: absolute;
 	bottom: 182px;
 	right: 272px;
 }
-.io_title_reset:hover
-{
+.io_title_reset:hover {
 	text-decoration: underline;
 }
 
-.io_rain
-{
+.io_rain {
 	position: absolute;
 	bottom: 5px;
 	left: 15px;
-	
 	text-align: center;
 }
 
-.io_rain_title
-{
-	color: #CCC;
+.io_rain_title {
+	color: #fafafa;
 	font-family: Georgia, serif;
 	font-size: 12px;
 	font-weight: bold;
 }
 
-#io_rain_inputs
-{
-	
+#io_rain_inputs {
 }
 
-.month_pair_precip
-{
+.month_pair_precip {
 	height: 38px;
 	float: left;
 	text-align: center;
 	margin-left: 5px;
-	
-	color: #ABA;
+	color: #fafafa;
 	font-family: Arial, Gadget, sans-serif;
 	font-weight: bold;
 	font-size: 11px;
 }
 
-.mp_text
-{
+.mp_text {
 	width: 24px;
 }
 
-.mp_box_precip
-{
+.mp_box_precip {
 	width: 39px;
 	height: 18px;
 }
 
-.io_area_title
-{
-	color: #CCC;
+.io_area_title {
+	color: #fafafa;
 	font-family: Georgia, serif;
 	font-size: 12px;
 	font-weight: bold;
 }
 
-.io_area
-{
+.io_area {
 	width: 100px;
-	
 	position: absolute;
 	bottom: 5px;
 	right: 27px;
-	
 	text-align: center;
 }
 
-#io_input_area
-{
+#io_input_area {
 	width: 60px;
 	height: 18px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

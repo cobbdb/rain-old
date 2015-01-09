@@ -24,6 +24,9 @@
 	 . Lonny Grafman: (lonny@appropedia.org) (www.appropedia.org)
 -->
 
+<link rel="icon" href="logo_icon.png" type="image/png">
+<link href="//fonts.googleapis.com/css?family=Cantora+One" rel="stylesheet">
+
 <!-- IE 8 'compatability' workarounds -->
 <meta http-equiv="X-UA-Compatible" content="IE=8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>

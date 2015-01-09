@@ -1,201 +1,159 @@
-
-.body_wrapper
-{
-	border: 2px solid #9E592B;/*#C86E32;*/
+.body_wrapper {
 	width: 740px;
 	height: 670px;
-	
-	/*center the div*/
 	position: absolute;
 	left: 0;
 	right: 0;
-	margin: 10px auto 0 auto;
-	
+	margin: auto;
 	cursor: default;
-	
-	background-image: url('bg_tile.jpg');
-	/*background-color: #333;*/
+	background-color: #444;
 }
 
-.bkg_credit
-{
+#google_translate_element {
+    position: absolute;
+    right: 0;
+    z-index: 100;
+    top: 0;
+    background-color: #fafafa;
+    padding-left: 10px;
+    padding-right: 30px;
+}
+
+.bkg_credit {
 	position: absolute;
 	bottom: 5px;
 	right: 5px;
-	
+
 	color: #333;
 	font-family: Georgia, serif;
 	font-size: 12px;
 	cursor: default;
 }
-.bkg_link
-{
+.bkg_link {
 	color: #555;
 	font-family: Georgia, serif;
 	font-size: 12px;
 	text-decoration: none;
 }
-.bkg_link:hover
-{
+.bkg_link:hover {
 	text-decoration: underline;
 	cursor: pointer;
 }
 
-
-#output img
-{
+#output img {
 	border: 0;
+    height: 120px;
+    margin-top: 8px;
+}
+#logo-title {
+    font-family: "Cantora One";
+    text-align: center;
+    margin-bottom: 2px;
+    color: #43c7f4;
+    font-size: 18px;
 }
 
-
-.input_section
-{
+.input_section {
 	/*border-width: 1px;
 	border-top-style: dashed;
 	border-right-style: dashed;
 	border-color: #666;*/
-	
 	position: absolute;
 	width: 470px;
 	height: 112px;
 	top: 500px;
-	
 	left: 0;
-	
 	/*background-color: #333;*/
 	cursor: default;
 }
 
-.top_pane
-{
+.top_pane {
 	position: absolute;
 	width: 740px;
 	height: 504px;
-	
 	left: 0;
 }
 
-.output_section
-{
+.output_section {
 	position: absolute;
 	width: 267px;
 	height: 550px;
-	
 	right: 0;
-	
 	/*background-color: #333;*/
 }
 
-.warning_drop_cap
-{
-	color: #CCC;
+.warning_drop_cap {
+	color: #fafafa;
 }
 
-.warning_link
-{
-	color: #ABA;
+.warning_link {
+	color: #bad1e0;
 	font-family: Arial, Gadget, sans-serif;
 	font-weight: bold;
 	font-size: 11px;
 	text-decoration: none;
 }
-.warning_link:hover
-{
+.warning_link:hover {
 	cursor: pointer;
 	text-decoration: underline;
 }
 
-.output_instructions
-{
+.output_instructions {
 	width: 260px;
-	position: relative;
-	left: 6px;
-	top: -10px;
-	
-	color: #ABA;
+	color: #fafafa;
 	font-family: Arial, Gadget, sans-serif;
 	font-weight: bold;
-	font-size: 11px;
-	
-	margin-bottom: -10px;
-}
-.output_instructions_drop_cap
-{
-	color: #CCC;
-	font-weight: bold;
-	font-family: Georgia, serif;
-	font-size: 16px;
+	font-size: 12px;
+    margin-left: 2px;
 }
 
-.graphic_section
-{
+.graphic_section {
 	position: absolute;
 	width: 470px;
 	height: 504px;
 	top: 0;
 	left: 0;
-	
 	text-align: center;
-	
 	/*background-color: #333;*/
 }
 
-#map_area
-{
+#map_area {
 	left: 2px;
-	
 	margin-top: -16px;
-	
 	width: 469px;
 	height: 504px;
 }
 
-.map_content
-{
-	border: 1px solid #666;
+.map_content {
 	width: 469px;
 	height: 420px;
 	position: relative;
-	
 	top: 2px;
 	left: 0;
 	z-index: 8000;
 }
-.map_go_panel
-{
+.map_go_panel {
 	position: relative;
 	left: 0;
-	top: 2px;
+	top: 4px;
 }
 
-.addr_title
-{
-	color: #CCC;
-	font-family: Georgia, serif;
-	font-size: 14px;
-	font-weight: bold;
-}
-
-#map_area
-{
+#map_area {
 	position: relative;
 	top: 20px;
 }
 
-.graph_area
-{
+.graph_area {
 	border: 0px solid yellow;
 	position: absolute;
 	height: 426px;
 	width: 469px;
-	
 	left: 2px;
 	bottom: 33px;
 	/*top: 50%;
 	margin-top: -200px;*/
 }
-#img_close_graph
-{
+#img_close_graph {
 	position: absolute;
 	right: -15px;
 	top: -15px;
@@ -205,82 +163,66 @@
 	z-index: 1000;
 }
 
-.output_data
-{
-	
+.output_data {
 }
 
-.output_calculations
-{
+.output_calculations {
 	position: relative;
 	top: -16px;
 }
 
-.ul_title
-{
-	color: #CCC;
+.ul_title {
+	color: #a68d60;
 	font-weight: bold;
 	font-family: Georgia, serif;
 	font-size: 16px;
-	
 	position: relative;
 	left: 6px;
 	margin-top: 5px;
 	cursor: default;
 }
-#output ul
-{
-	color: #ABA;
+#output ul {
+	color: #fafafa;
 	font-family: Arial, Gadget, sans-serif;
 	font-weight: bold;
 	font-size: 12px;
-	
 	position: relative;
 	top: -12px;
 	cursor: default;
 }
-#output li
-{
+#output li {
 	margin-bottom: 5px;
 }
 
-.graph_link
-{
-	color: #BAB;
+.graph_link {
+	color: #bad1e0;
 	cursor:pointer;
 	font-family: Georgia, serif;
 	font-size: 14px;
 	font-weight: bold;
-	
 	position: absolute;
 	right: 30px;
 }
-.graph_link:hover
-{
+.graph_link:hover {
 	text-decoration: underline;
 }
 
-.output_text
-{
-	color: #CCC;
+.output_text {
+	color: #fafafa;
 	font-family: Georgia, serif;
 	font-size: 14px;
 	font-weight: bold;
-	
 	position: absolute;
 	right: 30px;
 }
-.ot_material
-{
+.ot_material {
 	font-size: 12px;
 	height: 18px;
 	position: absolute;
 	right: 30px;
 }
 
-/* work around to get fullscreen background in CSS2 */
-#background
-{
+#background {
 	width: 100%;
     height: 100%;
     position: fixed;
@@ -288,61 +230,40 @@
     top: 0px;
     z-index: -1;
 }
-#background img
-{
+#background img {
 	width: 100%;
 	height: 100%;
 }
 
-.b_reset
-{
+.b_reset {
 	position: absolute;
 	left: 5px;
 }
 
-
-.unit_converter
-{
+.unit_converter {
 	text-align: center;
 }
 
-#unit_converter_text
-{
-	color: #BAB;
+#unit_converter_text {
+	color: #bad1e0;
+	font-family: Arial, Gadget, sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+	text-decoration: none;
+	cursor: pointer;
+}
+#unit_converter_text:hover {
+	text-decoration: underline;
+}
+
+.intro_link {
+	color: #bad1e0;
 	font-family: Arial, Gadget, sans-serif;
 	font-weight: bold;
 	font-size: 11px;
 	text-decoration: none;
 	cursor: pointer;
 }
-#unit_converter_text:hover
-{
+.intro_link:hover {
 	text-decoration: underline;
 }
-
-.intro_link
-{
-	color: #BAB;
-	font-family: Arial, Gadget, sans-serif;
-	font-weight: bold;
-	font-size: 11px;
-	text-decoration: none;
-	cursor: pointer;
-}
-.intro_link:hover
-{
-	text-decoration: underline;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
