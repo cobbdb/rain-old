@@ -27,47 +27,34 @@
 <link rel="icon" href="logo_icon.png" type="image/png">
 <link href="//fonts.googleapis.com/css?family=Cantora+One" rel="stylesheet">
 
-<!-- IE 8 'compatability' workarounds -->
-<meta http-equiv="X-UA-Compatible" content="IE=8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<script type="text/javascript">
+<script>
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-26042472-1']);
     _gaq.push(['_trackPageview']);
-
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
 </script>
+<script async defer src="http://www.google-analytics.com/ga.js"></script>
 
-<!-- search engine tags -->
-<title>PEquals.com: Rainwater Catchment Calculator</title>
-<meta name="description" content="Your one-stop aid in calculating and designing for commercial and residential rainwater catchment systems."/>
-<meta name="keywords" content="rainwater,catchment,rain collection,recycle rain,rain storage,monthly rainfall,weather station"/>
+<title>Rainwater Collection Calculator - PEquals</title>
+<meta name="description" content="Your one-stop aid for commercial and residential rainwater collection systems.">
+<meta name="keywords" content="rain,rainwater,collection,catchment,calculator,tool,gutters,tank,guide,rain collection,recycle rain,rain storage,monthly rainfall,weather station">
+<meta name="google-translate-customization" content="cf6f90d30cac88d-2bda3379a0f9b865-g2522b8edb7d27cab-10">
 
-<!-- link the Tools -->
-<script src="jquery.tools.min.js" type="text/javascript"></script>
+<script src="jquery.tools.min.js"></script>
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAABqfyq4qu61pWcJr7MlpdRhS1LKgbnxB6t-zDT26C_9JzY6Uq4RTD5XHPOaZD1KvNdGHb-dmo0S8wQA"></script>
+<script src="RainMap.js"></script>
+<script src="RCC_init.js"></script>
+<script src="map_labels.js"></script>
+<script src="rcc_util.js"></script>
+<script src="highcharts.js"></script>
+<script src="rcc_graphs.js"></script>
+<script src="rcc_math.js"></script>
+<script src="rcc_units.js"></script>
 
-<!-- Rain GMap libraries -->
-<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAABqfyq4qu61pWcJr7MlpdRhS1LKgbnxB6t-zDT26C_9JzY6Uq4RTD5XHPOaZD1KvNdGHb-dmo0S8wQA" type="text/javascript"></script>
-<script src="http://serverapi.arcgisonline.com/jsapi/gmaps/?v=1.6" type="text/javascript"></script>
-<script src="RainMap.js" type="text/javascript"></script>
-<script src="RCC_init.js" type="text/javascript"></script>
-<script src="map_labels.js" type="text/javascript"></script>
-<script src="rcc_util.js" type="text/javascript"></script>
-<script src="highcharts.js" type="text/javascript"></script>
-<script src="rcc_graphs.js" type="text/javascript"></script>
-<script src="rcc_math.js" type="text/javascript"></script>
-<script src="rcc_units.js" type="text/javascript"></script>
-
-<link href="rcc.css" rel="stylesheet" type="text/css"/>
-<link href="rcc_overlays.css" rel="stylesheet" type="text/css"/>
-<link href="rcc_input_override.css" rel="stylesheet" type="text/css"/>
-<link href="rcc_input_area.css" rel="stylesheet" type="text/css"/>
-<link href="rcc_help.css" rel="stylesheet" type="text/css"/>
-
-<!-- Google Website Translator -->
-<meta name="google-translate-customization" content="cf6f90d30cac88d-2bda3379a0f9b865-g2522b8edb7d27cab-10"></meta>
+<link type="text/css" rel="stylesheet" href="rcc.css">
+<link type="text/css" rel="stylesheet" href="rcc_overlays.css">
+<link type="text/css" rel="stylesheet" href="rcc_input_override.css">
+<link type="text/css" rel="stylesheet" href="rcc_input_area.css">
+<link type="text/css" rel="stylesheet" href="rcc_help.css">

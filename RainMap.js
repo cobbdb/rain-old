@@ -68,8 +68,6 @@ function initialize() {
         draggingCursor: 'move'
     });
 
-    mapExtension = new esri.arcgis.gmaps.MapExtension(map);
-
     tooltip = document.createElement('div');
     tooltip.className = 'tooltip';
     map.getPane(G_MAP_MARKER_PANE).appendChild(tooltip);
@@ -264,7 +262,6 @@ function callWeather() {
     var map_center = map.getCenter();
 
     $.ajax({
-        //url: 'http://localhost/rain/rain.php',
         url: './data/rain.php',
         data: 'lat=' + map_center.lat() + '&' +
             'lng=' + map_center.lng(),
