@@ -1,12 +1,16 @@
 .body_wrapper {
-	width: 740px;
-	height: 670px;
-	position: absolute;
-	left: 0;
-	right: 0;
-	margin: auto;
-	cursor: default;
-	background-color: #444;
+    width: 740px;
+    height: 670px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: default;
+    background-color: #444;
+    background-color: rgba(68, 68, 68, .75);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.8);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.8);
+    box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.8);
 }
 
 #google_translate_element {
@@ -20,28 +24,28 @@
 }
 
 .bkg_credit {
-	position: absolute;
-	bottom: 5px;
-	right: 5px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
 
-	color: #333;
-	font-family: Georgia, serif;
-	font-size: 12px;
-	cursor: default;
+    color: #333;
+    font-family: Georgia, serif;
+    font-size: 12px;
+    cursor: default;
 }
 .bkg_link {
-	color: #555;
-	font-family: Georgia, serif;
-	font-size: 12px;
-	text-decoration: none;
+    color: #555;
+    font-family: Georgia, serif;
+    font-size: 12px;
+    text-decoration: none;
 }
 .bkg_link:hover {
-	text-decoration: underline;
-	cursor: pointer;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 #output img {
-	border: 0;
+    border: 0;
     height: 120px;
     margin-top: 8px;
 }
@@ -54,174 +58,174 @@
 }
 
 .input_section {
-	/*border-width: 1px;
-	border-top-style: dashed;
-	border-right-style: dashed;
-	border-color: #666;*/
-	position: absolute;
-	width: 470px;
-	height: 112px;
-	top: 500px;
-	left: 0;
-	/*background-color: #333;*/
-	cursor: default;
+    /*border-width: 1px;
+    border-top-style: dashed;
+    border-right-style: dashed;
+    border-color: #666;*/
+    position: absolute;
+    width: 470px;
+    height: 112px;
+    top: 500px;
+    left: 0;
+    /*background-color: #333;*/
+    cursor: default;
 }
 
 .top_pane {
-	position: absolute;
-	width: 740px;
-	height: 504px;
-	left: 0;
+    position: absolute;
+    width: 740px;
+    height: 504px;
+    left: 0;
 }
 
 .output_section {
-	position: absolute;
-	width: 267px;
-	height: 550px;
-	right: 0;
-	/*background-color: #333;*/
+    position: absolute;
+    width: 267px;
+    height: 550px;
+    right: 0;
+    /*background-color: #333;*/
 }
 
 .warning_drop_cap {
-	color: #fafafa;
+    color: #fafafa;
 }
 
 .warning_link {
-	color: #bad1e0;
-	font-family: Arial, Gadget, sans-serif;
-	font-weight: bold;
-	font-size: 11px;
-	text-decoration: none;
+    color: #bad1e0;
+    font-family: Arial, Gadget, sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    text-decoration: none;
 }
 .warning_link:hover {
-	cursor: pointer;
-	text-decoration: underline;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .output_instructions {
-	width: 260px;
-	color: #fafafa;
-	font-family: Arial, Gadget, sans-serif;
-	font-size: 12px;
+    width: 260px;
+    color: #fafafa;
+    font-family: Arial, Gadget, sans-serif;
+    font-size: 12px;
     margin-left: 2px;
 }
 
 .graphic_section {
-	position: absolute;
-	width: 470px;
-	height: 504px;
-	top: 0;
-	left: 0;
-	text-align: center;
-	/*background-color: #333;*/
+    position: absolute;
+    width: 470px;
+    height: 504px;
+    top: 0;
+    left: 0;
+    text-align: center;
+    /*background-color: #333;*/
 }
 
 #map_area {
-	left: 2px;
-	margin-top: -16px;
-	width: 469px;
-	height: 504px;
+    left: 2px;
+    margin-top: -16px;
+    width: 469px;
+    height: 504px;
 }
 
 .map_content {
-	width: 469px;
-	height: 420px;
-	position: relative;
-	top: 2px;
-	left: 0;
-	z-index: 8000;
+    width: 469px;
+    height: 420px;
+    position: relative;
+    top: 2px;
+    left: 0;
+    z-index: 8000;
 }
 .map_go_panel {
-	position: relative;
-	left: 0;
-	top: 4px;
+    position: relative;
+    left: 0;
+    top: 4px;
 }
 
 #map_area {
-	position: relative;
-	top: 20px;
+    position: relative;
+    top: 20px;
 }
 
 .graph_area {
-	border: 0px solid yellow;
-	position: absolute;
-	height: 426px;
-	width: 469px;
-	left: 2px;
-	bottom: 33px;
-	/*top: 50%;
-	margin-top: -200px;*/
+    border: 0px solid yellow;
+    position: absolute;
+    height: 426px;
+    width: 469px;
+    left: 2px;
+    bottom: 33px;
+    /*top: 50%;
+    margin-top: -200px;*/
 }
 #img_close_graph {
-	position: absolute;
-	right: -15px;
-	top: -15px;
-	cursor: pointer;
-	height: 35px;
-	width: 35px;
-	z-index: 1000;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    z-index: 1000;
 }
 
 .output_data {
 }
 
 .output_calculations {
-	position: relative;
-	top: -16px;
+    position: relative;
+    top: -16px;
 }
 
 .ul_title {
-	color: #a68d60;
-	font-weight: bold;
-	font-family: Georgia, serif;
-	font-size: 16px;
-	position: relative;
-	left: 6px;
-	margin-top: 5px;
-	cursor: default;
+    color: #a68d60;
+    font-weight: bold;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    position: relative;
+    left: 6px;
+    margin-top: 5px;
+    cursor: default;
 }
 #output ul {
-	color: #fafafa;
-	font-family: Arial, Gadget, sans-serif;
-	font-size: 12px;
-	position: relative;
-	top: -12px;
-	cursor: default;
+    color: #fafafa;
+    font-family: Arial, Gadget, sans-serif;
+    font-size: 12px;
+    position: relative;
+    top: -12px;
+    cursor: default;
 }
 #output li {
-	margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 .graph_link {
-	color: #bad1e0;
-	cursor:pointer;
-	font-family: Georgia, serif;
-	font-size: 14px;
-	font-weight: bold;
-	position: absolute;
-	right: 30px;
+    color: #bad1e0;
+    cursor:pointer;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    right: 30px;
 }
 .graph_link:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 .output_text {
-	color: #fafafa;
-	font-family: Georgia, serif;
-	font-size: 14px;
-	font-weight: bold;
-	position: absolute;
-	right: 30px;
+    color: #fafafa;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    right: 30px;
 }
 .ot_material {
-	font-size: 12px;
-	height: 18px;
-	position: absolute;
-	right: 30px;
+    font-size: 12px;
+    height: 18px;
+    position: absolute;
+    right: 30px;
 }
 
 #background {
-	width: 100%;
+    width: 100%;
     height: 100%;
     position: fixed;
     left: 0px;
@@ -229,39 +233,39 @@
     z-index: -1;
 }
 #background img {
-	width: 100%;
-	height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .b_reset {
-	position: absolute;
-	left: 5px;
+    position: absolute;
+    left: 5px;
 }
 
 .unit_converter {
-	text-align: center;
+    text-align: center;
 }
 
 #unit_converter_text {
-	color: #bad1e0;
-	font-family: Arial, Gadget, sans-serif;
-	font-weight: bold;
-	font-size: 12px;
-	text-decoration: none;
-	cursor: pointer;
+    color: #bad1e0;
+    font-family: Arial, Gadget, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
 }
 #unit_converter_text:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 .intro_link {
-	color: #bad1e0;
-	font-family: Arial, Gadget, sans-serif;
-	font-weight: bold;
-	font-size: 11px;
-	text-decoration: none;
-	cursor: pointer;
+    color: #bad1e0;
+    font-family: Arial, Gadget, sans-serif;
+    font-weight: bold;
+    font-size: 11px;
+    text-decoration: none;
+    cursor: pointer;
 }
 .intro_link:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
